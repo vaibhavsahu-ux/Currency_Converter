@@ -11,7 +11,7 @@ A simple Python project to convert amounts between different currencies using ha
 3. Run the script
 4. Make sure you input INR, USD or EUR when asked for the conversion currency inputs
 
-##Future Improvements
+## Future Improvements
 1. Integrate with a real exchange rate API for live data.
 2. Add support for more currencies.
 
