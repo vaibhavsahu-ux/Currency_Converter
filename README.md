@@ -1,9 +1,11 @@
 # Currency Converter
 
-A simple Python project to convert amounts between different currencies using hardcoded exchange rates (for now).
+A simple Python project to convert currencies using real time exchange rates from exchangereate-api.com
 
-## Limitations
-1. Can only convert between INR, USD & EUR
+## Features
+1. Takes live currency rates from an api
+2. Entirely runs on CLI
+3. Supports all major currencies
 
 ## How to Run
 1. Make sure you have Python installed.
@@ -12,6 +14,4 @@ A simple Python project to convert amounts between different currencies using ha
 4. Make sure you input INR, USD or EUR when asked for the conversion currency inputs
 
 ## Future Improvements
-1. Integrate with a real exchange rate API for live data.
-2. Add support for more currencies.
-
+1. Case-insensitive currency input
