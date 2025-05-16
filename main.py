@@ -1,7 +1,10 @@
+import requests
+
+
 # defining a user input interface function that will take inputs from the user.
 
 def user_input():
-    print(":CURRENCY CONVERTER:\nAvailable currencies: INR, USD, EUR")
+    print(":CURRENCY CONVERTER:\n\n-you need to type the currect currency code to get the results\n(for example: rupee is INR and dollar is USD etc)\n")
 
     #getting user input.
 
@@ -12,15 +15,20 @@ def user_input():
     print(f"===>{convert_currency(amount, from_currency, to_currency)}")
 
 
-#defining a function which will check and return the available currency which can be converted.
+# getting the currency rates from the api
 
 def get_exchange_rate(from_currency, to_currency):
-    rates = {
-        'USD':{'INR':83.3,'EUR':0.92},
-        'INR':{'USD':0.012,'EUR':0.011},
-        'EUR':{'USD':1.09,'INR':90.5}
-    }
-    return rates.get(from_currency, {}).get(to_currency, None)
+    api_key = 'd1b28fa9e234625e8d82f5cd'
+    url = f"https://v6.exchangerate-api.com/v6/d1b28fa9e234625e8d82f5cd/latest/{from_currency}"
+
+    responce = requests.get(url)
+    data = responce.json()
+
+    if responce.status_code != 200 or data['result'] != 'success':
+        return None
+
+    return data['conversion_rates'].get(to_currency, None)
+
 
 
 # defining a function which will perform the conversion.
