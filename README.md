@@ -8,10 +8,10 @@ A simple Python project to convert currencies using real time exchange rates fro
 3. Supports all major currencies
 
 ## How to Run
-1. Make sure you have Python installed.
-2. Clone the repository or download the code.
-3. Run the script
-4. Make sure you input INR, USD or EUR when asked for the conversion currency inputs
+1. Make sure you have Python installed
+2. Clone the repository to a folder
+3. Run the main.py file inside the Currency_Converter folder
+4. Make sure you use correct currency codes, enter the codes in capital
 
 ## Future Improvements
 1. Case-insensitive currency input
